@@ -17,4 +17,12 @@ RSpec.describe Spacecraft do
     expect(daedalus.fuel).to eq(400)
   end
 
+  it 'has requirements' do
+    daedalus = Spacecraft.new({name: 'Daedalus', fuel: 400})
+
+
+    expect(daedalus.requirements).to eq([])
+  end
+
+
 end
