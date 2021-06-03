@@ -18,4 +18,10 @@ RSpec.describe Flotilla do
 
     expect(seventh_flotilla.name).to eq('Seventh Flotilla')
   end
+
+  it 'has personal and ships' do
+    seventh_flotilla = Flotilla.new({designation: 'Seventh Flotilla'})
+    
+    expect(seventh_flotilla.personnel).to eq([])
+    expect(seventh_flotilla.ships).to eq([])
 end
