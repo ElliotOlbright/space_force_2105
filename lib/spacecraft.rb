@@ -6,5 +6,7 @@ class Spacecraft
     @requirements = []
   end 
 
-
+  def add_requirement(data)
+    @requirements.push(data)
+  end 
 end 
