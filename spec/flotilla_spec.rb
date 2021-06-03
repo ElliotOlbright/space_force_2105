@@ -59,7 +59,7 @@ RSpec.describe Flotilla do
     expect(seventh_flotilla.personnel).to eq(([kathy, polly, rover, sampson]))
   end
 
-  it 'can recommend personell' do 
+  it 'can recommend personell' do
     daedalus = Spacecraft.new({name: 'Daedalus', fuel: 400})
     daedalus.add_requirement({astrophysics: 6})
     daedalus.add_requirement({quantum_mechanics: 3})
@@ -76,7 +76,13 @@ RSpec.describe Flotilla do
     sampson = Person.new('Sampson Edwards', 7)
     sampson.add_specialty(:astrophysics)
     sampson.add_specialty(:quantum_mechanics)
-
-    expect(seventh_flotilla.recommend_personnel(daedalus).to eq([kathy, sampson])
+    seventh_flotilla.add_personnel(kathy)
+    seventh_flotilla.add_personnel(polly)
+    seventh_flotilla.add_personnel(rover)
+    seventh_flotilla.add_personnel(sampson)
+    seventh_flotilla.add_ship(daedalus)
+  
+    expect(seventh_flotilla.recommend_personnel(daedalus)).to eq([kathy, sampson])
   end 
+
 end
