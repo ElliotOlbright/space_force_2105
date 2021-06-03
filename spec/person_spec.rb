@@ -14,9 +14,11 @@ RSpec.describe Person do
 
     expect(kathy.name).to eq('Kathy Chan')
     expect(kathy.experience).to eq(10)
-    expect(kathy.specialty).to eq([])
+    expect(kathy.specialties).to eq([])
 
-    #expect(kathy.specialty).to eq(:astrophysics)
+    
+
+    #expect(kathy.specialties).to eq([:astrophysics, :quantum_mechanics])
   end
 
 
