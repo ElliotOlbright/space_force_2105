@@ -24,4 +24,5 @@ RSpec.describe Flotilla do
     
     expect(seventh_flotilla.personnel).to eq([])
     expect(seventh_flotilla.ships).to eq([])
+  end
 end
