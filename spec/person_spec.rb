@@ -17,7 +17,7 @@ RSpec.describe Person do
     expect(kathy.specialties).to eq([])
   end
 
-  it 'adds a specialty' d0
+  it 'adds a specialty' do
     kathy = Person.new('Kathy Chan', 10)
 
     kathy.add_specialty(:astrophysics)

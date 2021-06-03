@@ -5,4 +5,8 @@ class Person
     @experience = experience
     @specialties = []
   end 
+
+  def add_specialty(skill)
+    @specialties.push(skill)
+  end
 end 
